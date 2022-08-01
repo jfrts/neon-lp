@@ -1,0 +1,32 @@
+header {
+    background-color: $brand-blue;
+    display: flex;
+    height: 8.8rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .container {
+        @include flex(row, center, space-between);
+    }
+    nav {
+        align-items: center;
+        display: flex;
+        ul {
+            align-items: center;
+            display: flex;
+            gap: 4.8rem;
+            margin-right: 5.9rem;
+            a {
+                color: #FFF;
+                font-family: 'Poppins', 'sans-serif';
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 125%;
+                transition: color 300ms ease;
+                &:hover {
+                    color: $brand-yellow;
+                }
+            }
+        }
+    }
+}
