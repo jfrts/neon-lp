@@ -178,13 +178,61 @@
         }
         .btn-other-products {
             color: $brand-blue;
-            display: block;
+            display: inline-block;
             font-family: 'Poppins', sans-serif;
             font-size: 1.6rem;
             font-weight: 500;
             line-height: 112%;
             letter-spacing: -0.05rem;
             margin-top: 3.2rem;
+            position: relative;
+            &::after {
+                background-color: $brand-yellow;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 3px;
+                position: absolute;
+                right: -1.8rem;
+                width: 10px;
+            }
+        }
+        .box-card {
+            background: url("../img/bg-box-card-neon.svg") no-repeat center center;
+            border-radius: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 41rem;
+            margin-top: 14.4rem;
+            width: 100%;
+            padding-left: 5.9rem;
+            .text {
+                max-width: 38rem; 
+                width: 100%;
+                h2 {
+                    color: #FFF;
+                    margin-bottom: 1.1rem;
+                }
+                h3 {
+                    color: #FFF;
+                    margin-bottom: 0.8rem;
+                    max-width: 32.7rem;
+                }
+                p {
+                    color: transparentize($color: #FFF, $amount: 0.2);
+                    font-size: 1.6rem;
+                    line-height: 150%;
+                    margin-bottom: 3.1rem;
+                }
+                .buttons {
+                    display: flex;
+                    gap: 1.6rem;
+                }
+            }
+            img {
+                margin-right: -3.18rem;
+            }
         }
     }
 }
