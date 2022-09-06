@@ -80,3 +80,112 @@
         }
     }
 }
+
+.s-card-neon {
+    padding-top: 12.9rem;
+    .container {
+        @include flex(row, flex-start, space-between);
+    }
+    .left-area {
+        max-width: 27.73rem;
+        width: 100%;
+        .illustration-mockup {
+            width: 100%;
+            max-width: 27.7rem;
+            margin-bottom: 12.9rem;
+            position: relative;
+            .circle {
+                left: -21.4rem;
+                max-width: 37.7rem;
+                position: absolute;
+                top: 8.7rem;
+                z-index: -1;
+            }
+        }
+        .text {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .icon {
+                position: relative;
+                &:before {
+                    background: url("../img/points.svg") no-repeat center center;
+                    content: "";
+                    left: 50%;
+                    height: 83px;
+                    margin-left: -2.5px;
+                    position: absolute;
+                    width: 5px;
+                    top: -104px;
+                }
+            }
+            .info-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3 {
+                    color: $gray-600;
+                    margin-top: 3.6rem;
+                    text-align: center;
+                }
+                p {
+                    color: $gray-400;
+                    font-size: 1.6rem;
+                    line-height: 150%;
+                    margin-bottom: 2.6rem;
+                    opacity: 0.8;
+                    text-align: center;
+                }
+                ul {
+                  display: flex; 
+                  flex-direction: column;
+                  gap: 2.4rem; 
+                }
+            }
+        }
+    }
+    .right-area {
+        max-width: 80rem;
+        width: 100%;
+        h2 {
+            color: $gray-600;
+            margin-bottom: 4.8rem;
+            max-width: 48.8rem;
+            width: 100%;
+        }
+        ul > li {
+            @include flex(row, center, space-between);
+            border-bottom: 1px solid transparentize($color: #E1EDE7, $amount: 0.1);
+            padding: 3.3rem 0;
+            &:first-child {
+                padding-top: 0;
+            }
+            .info {
+                @include flex(row, center, flex-start);
+                gap: 4.4rem;
+                .text {
+                    h3 {
+                        color: $gray-400;
+                    }
+                    p {
+                        color: $gray-300;
+                        font-size: 1.8rem;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+        .btn-other-products {
+            color: $brand-blue;
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 112%;
+            letter-spacing: -0.05rem;
+            margin-top: 3.2rem;
+        }
+    }
+}
+
