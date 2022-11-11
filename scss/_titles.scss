@@ -1,21 +1,37 @@
 h1 {
     font-size: 6.4rem;
+
+    @include responsive(1050px) {
+        font-size: 5.8rem;
+    }
 }
 
 h2 {
     font-size: 4rem;
+
+    @include responsive(1050px) {
+        font-size: 3.4rem;
+    }
 }
 
 h3 {
     color: $gray-600;
     font-size: 2.4rem;
     line-height: 150%;
+
+    @include responsive(1050px) {
+        font-size: 2.2rem;
+    }
 }
 
 h4 {
     color: $gray-400;
     font-size: 2rem;
     line-height: 112%;
+
+    @include responsive(1050px) {
+        font-size: 1.8rem;
+    }
 }
 
 h1,

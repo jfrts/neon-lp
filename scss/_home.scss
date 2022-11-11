@@ -79,20 +79,158 @@
 
             .cards-circle {
                 left: 11rem;
+                max-width: 55.3rem;
                 top: 2.8rem;
                 z-index: 1;
             }
 
             .card-front {
                 left: 0;
+                max-width: 43.5rem;
                 top: 4.1rem;
                 z-index: 3;
             }
 
             .card-back {
                 left: 26.629rem;
+                max-width: 35.2rem;
                 top: 17.27rem;
                 z-index: 2;
+            }
+        }
+    }
+
+    @include responsive(1440px) {
+        .image-area {
+            margin-right: 4rem;
+        }
+    }
+
+    @include responsive(1200px) {
+        padding-top: 12.5rem;
+        height: 62rem;
+
+        .text>ul {
+            margin-top: 3.8rem;
+        }
+
+        .image-area>.image {
+            height: 45.1rem;
+            top: 0;
+
+            h2 {
+                margin-bottom: 0.7rem;
+            }
+
+            .cards-circle {
+                max-width: 42.3rem;
+            }
+
+            .card-front {
+                max-width: 34.5rem;
+            }
+
+            .card-back {
+                max-width: 31rem;
+                left: 22rem;
+            }
+        }
+    }
+
+    @include responsive(1000px) {
+        padding-top: 12.5rem;
+        height: 110rem;
+        background-size: cover;
+
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text {
+            text-align: center;
+            margin-bottom: 6.4rem;
+
+            h1 {
+                font-size: 6.8rem;
+            }
+
+            ul {
+                max-width: 98%;
+            }
+        }
+
+        .image-area {
+            margin-right: 0;
+
+            h2 {
+                margin-bottom: 2.7rem;
+            }
+
+            .image {
+                .card-front {
+                    left: 8rem;
+                }
+
+                .card-back {
+                    left: 30rem;
+                }
+
+                .cards-circle {
+                    left: 14rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(730px) {
+        .text {
+            h1 {
+                font-size: 5.2rem;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                gap: 0.8rem;
+
+                li>span {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    @include responsive(500px) {
+        .image-area {
+            margin-right: 0;
+
+            h2 {
+                margin-bottom: 2.7rem;
+            }
+
+            .image {
+                max-width: 30.5rem;
+                height: 24.8rem;
+
+                .card-front {
+                    left: 4rem;
+                    max-width: 23rem;
+                }
+
+                .card-back {
+                    left: 20rem;
+                    max-width: 23rem;
+                    top: 11rem;
+                }
+
+                .cards-circle {
+                    left: 7rem;
+                    max-width: 36rem;
+                }
             }
         }
     }
