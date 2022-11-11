@@ -1,20 +1,24 @@
 footer {
     background-color: $brand-blue;
     padding-top: 4.9rem;
+
     .top {
         border-bottom: solid 0.2rem transparentize($color: #49c5fd, $amount: 0.8);
         display: flex;
         justify-content: space-between;
         margin-bottom: 5.7rem;
         padding-bottom: 4.8rem;
+
         .share {
             align-items: center;
             display: flex;
             gap: 3rem;
+
             span {
                 color: transparentize($color: #FFFFFF, $amount: 0.3);
                 font-size: 1.4rem;
             }
+
             ul {
                 align-items: center;
                 gap: 3rem;
@@ -48,6 +52,7 @@ footer {
                     display: flex;
                     flex-direction: column;
                     gap: 2.9rem;
+
                     li {
                         a {
                             font-size: 1.4rem;
@@ -65,6 +70,7 @@ footer {
                 gap: 2.5rem;
                 max-width: 28rem;
                 width: 100%;
+
                 .contact {
                     align-items: center;
                     background-color: transparentize($color: #00a5f0, $amount: 0.77);
@@ -76,15 +82,18 @@ footer {
 
                     .info {
                         margin-left: 2.4rem;
+
                         strong,
                         p {
                             font-size: 1.4rem;
                             line-height: 150%;
                         }
+
                         strong {
                             color: #FFFFFF;
                             font-weight: bold;
                         }
+
                         p {
                             color: transparentize($color: #FFFFFF, $amount: 0.2);
                         }
@@ -100,9 +109,11 @@ footer {
         display: flex;
         gap: 2.4rem;
         padding-bottom: 3.4rem;
+
         .icon {
             font-size: 1.8rem;
         }
+
         p {
             font-size: 1.4rem;
             color: transparentize($color: #FFFFFF, $amount: 0.2);
