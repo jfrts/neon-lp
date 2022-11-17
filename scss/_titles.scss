@@ -1,7 +1,7 @@
 h1 {
     font-size: 6.4rem;
 
-    @include responsive(1050px) {
+    @include responsive(1200px) {
         font-size: 5.8rem;
     }
 }

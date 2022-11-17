@@ -72,30 +72,10 @@
             position: relative;
             top: 3.5rem;
             width: 100%;
+            transform: translateX(-0.8rem);
 
             img {
                 position: absolute;
-            }
-
-            .cards-circle {
-                left: 11rem;
-                max-width: 55.3rem;
-                top: 2.8rem;
-                z-index: 1;
-            }
-
-            .card-front {
-                left: 0;
-                max-width: 43.5rem;
-                top: 4.1rem;
-                z-index: 3;
-            }
-
-            .card-back {
-                left: 26.629rem;
-                max-width: 35.2rem;
-                top: 17.27rem;
-                z-index: 2;
             }
         }
     }
@@ -121,19 +101,6 @@
             h2 {
                 margin-bottom: 0.7rem;
             }
-
-            .cards-circle {
-                max-width: 42.3rem;
-            }
-
-            .card-front {
-                max-width: 34.5rem;
-            }
-
-            .card-back {
-                max-width: 31rem;
-                left: 22rem;
-            }
         }
     }
 
@@ -152,7 +119,7 @@
             margin-bottom: 6.4rem;
 
             h1 {
-                font-size: 6.8rem;
+                font-size: 5.6rem;
             }
 
             ul {
@@ -166,45 +133,39 @@
             h2 {
                 margin-bottom: 2.7rem;
             }
+        }
+    }
 
-            .image {
-                .card-front {
-                    left: 8rem;
-                }
+    @include responsive(700px) {
+        .text {
+            ul {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 2.4rem;
+                max-width: 100%;
 
-                .card-back {
-                    left: 30rem;
-                }
-
-                .cards-circle {
-                    left: 14rem;
+                li {
+                    span {
+                        max-width: 100%;
+                    }
                 }
             }
         }
     }
 
-    @include responsive(730px) {
+    @include responsive(550px) {
+        height: 88rem;
+
         .text {
             h1 {
-                font-size: 5.2rem;
+                font-size: 3.8rem;
             }
 
-            ul {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                max-width: 100%;
-                gap: 0.8rem;
-
-                li>span {
-                    max-width: 100%;
-                }
+            h3 {
+                font-size: 2rem
             }
         }
-    }
 
-    @include responsive(500px) {
         .image-area {
             margin-right: 0;
 
@@ -213,24 +174,9 @@
             }
 
             .image {
-                max-width: 30.5rem;
+                max-width: 100%;
                 height: 24.8rem;
-
-                .card-front {
-                    left: 4rem;
-                    max-width: 23rem;
-                }
-
-                .card-back {
-                    left: 20rem;
-                    max-width: 23rem;
-                    top: 11rem;
-                }
-
-                .cards-circle {
-                    left: 7rem;
-                    max-width: 36rem;
-                }
+                scale: 0.9;
             }
         }
     }
@@ -375,6 +321,7 @@
 
         .box-card {
             background: url("../img/bg-box-card-neon.svg") no-repeat center center;
+            background-size: cover;
             border-radius: 1.2rem;
             display: flex;
             align-items: center;
@@ -414,6 +361,135 @@
 
             img {
                 margin-right: -3.18rem;
+            }
+        }
+
+        @include responsive(1100px) {
+            max-width: 100%;
+
+            .main-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    font-size: 4rem;
+                    text-align: center;
+                    max-width: 50rem;
+                }
+
+                ul {
+                    width: 100%;
+                }
+
+            }
+
+            .box-card {
+                justify-content: space-around;
+                padding-left: 0;
+                margin-top: 6rem;
+
+                .text {
+                    h2 {
+                        font-size: 4.2rem;
+                    }
+                }
+            }
+        }
+
+        @include responsive(810px) {
+            .box-card {
+                flex-direction: column;
+                height: 46rem;
+                position: relative;
+                
+                .text {
+                    margin-bottom: 11rem;
+                    text-align: center;
+
+                    h3 {
+                        max-width: 100%;
+                    }
+
+                    .buttons {
+                        justify-content: center;
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    bottom: -10rem;
+                }
+            }
+        }
+
+        @include responsive(500px) {
+            .box-card {
+                .text {
+                    h2 {
+                        font-size: 3.6rem;
+                    }
+
+                    h3 {
+                        padding: 0 2.4rem;
+                    }
+                }
+    
+                img {
+                    bottom: -8rem;
+                    width: 80%;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    @include responsive(1100px) {
+        .container {
+            flex-direction: column-reverse;
+        }
+
+        .left-area {
+            align-items: center;
+            display: grid;
+            gap: 1.6rem;
+            grid-template-columns: 1fr 1fr;
+            max-width: 100%;
+            margin: 10rem 0;
+
+            .illustration-mockup {
+                max-width: 100%;
+                margin-bottom: 0;
+                display: flex;
+                justify-content: center;
+
+                .circle {
+                    display: none;
+                }
+            }
+
+            .text {
+                margin: 0 auto;
+                max-width: 27rem;
+            }
+        }
+    }
+
+    @include responsive(800px) {
+        .left-area {
+            margin-top: 18rem;
+        }
+    }
+
+    @include responsive(570px) {
+
+        .left-area {
+            margin: 20rem 0;
+            gap: 4.8rem;
+            grid-template-columns: 1fr;
+
+            .illustration-mockup {
+                order: 1;
             }
         }
     }
